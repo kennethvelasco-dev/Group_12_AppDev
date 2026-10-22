@@ -1,1 +1,0 @@
-"# Group_12_AppDev"  initgit add .git commit -m "first commit - added mvc app files"git branch -M maingit remote add origin https://github.com/kennethvelasco-dev/Group_12_AppDev.gitgit push -u origin main
