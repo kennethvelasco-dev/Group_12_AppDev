@@ -1,15 +1,94 @@
-@Model MyMvcApp.Models.Student
+@* My portfolio page. All 3 parts (Home, About, Contact) are on this one page. *@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
 
-<h1>@ViewBag.KahitAnongTitle</h1>
-<h3>@ViewData["KahitAnoUlet"]</h3>
-<div>
-    <span>
-        <h2>Student Number</h1> 
-        <label>@Model.StudentNumber</label>
-    </span>
-    <span>
-        <h2>Name</h1> 
-        <label>@String.Format("{0} {1} {2}",Model.FirstName, Model.MiddleName, Model.LastName) </label>
-    </span>
-</div>
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    
+    <link rel="stylesheet" href="~/css/gabrielle.css" />
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTFOLIO</div>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+
+    <section id="home">
+        <div class="content">
+            <div class="home-text">
+                <h1>HI, I AM<br />GABRIELLE</h1>
+                <h2>AN ASPIRING<br />SOFTWARE DEVELOPER</h2>
+            </div>
+            <img class="home-photo" src="~/images/carousel.jpg" alt="Gabrielle at the carousel" />
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="content about-content">
+            <img class="about-photo" src="~/images/carousel.jpg" alt="Gabrielle at the carousel" />
+            <div class="about-text">
+                <h1>ABOUT ME</h1>
+                <p>
+                    Hello! I am Gabrielle O. Jaime, currently in my second year pursuing a degree
+                    in Computer Science, I’m planning to be a software developer dedicated to
+                    building functional, user-focused applications while continuously expanding my
+                    technical toolkit. My journey into tech is driven by a genuine curiosity for a
+                    hands-on desire to solve practical problems through code.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="content contact-content">
+            <div class="contact-text">
+                <h1>CONTACT ME</h1>
+
+                <div class="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://www.facebook.com/winter.elle8" target="_blank">www.facebook.com/winter.elle8</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/elle.coholicc/" target="_blank">www.instagram.com/elle.coholicc/</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/gabrielle-jaime-15b149325/" target="_blank">www.linkedin.com/in/gabrielle-jaime-15b149325/</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    @* In a .cshtml file, @@ prints a single @ *@
+                    <a href="mailto:gabiyahayme@@gmail.com">gabiyahayme@@gmail.com</a>
+                </div>
+            </div>
+
+            <img class="contact-photo" src="~/images/hedge.webp" alt="Gabrielle beside a hedge at night" />
+        </div>
+    </section>
+
+    <script src="~/js/gabrielle.js"></script>
+</body>
+</html>
